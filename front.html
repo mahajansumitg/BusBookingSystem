@@ -1,0 +1,92 @@
+<html>
+<head>
+<style>
+body
+{
+background-image:url('back.jpg');
+}
+background-color:"";
+</style>
+</head>
+<body>
+<font size="12"><h1><center><b><u>Welcome To Travel Agency Pune<br></u></b></center></h1></font> <br><br>
+
+<center><div id ="img2">
+<script language="JavaScript1.1">
+var specifyimage=new Array() //some images
+specifyimage[0]="41.jpg"
+specifyimage[1]="42.jpg"
+specifyimage[2]="43.jpg"
+specifyimage[3]="44.jpg"
+specifyimage[4]="45.jpg"
+specifyimage[5]="46.jpg"
+specifyimage[6]="47.jpg"
+
+var delay=3000 //3 seconds
+
+//Counter for array 
+var count =1;
+
+var cubeimage=new Array()
+for (i=0;i<specifyimage.length;i++){
+cubeimage[i]=new Image()
+cubeimage[i].src=specifyimage[i]
+}
+
+function movecube(){
+if (window.createPopup)
+cube.filters[0].apply()
+document.images.cube.src=cubeimage[count].src;
+if (window.createPopup)
+cube.filters[0].play()
+count++;
+if (count==cubeimage.length)
+count=0;
+setTimeout("movecube()",delay)
+}
+
+window.onload=new Function("setTimeout('movecube()',delay)")
+</script>
+
+<img src="41.JPG" name="cube"  border=0 style="filter:progid:DXImageTransform.Microsoft.Stretch(stretchStyle='PUSH')">
+</div></center>
+
+<br>
+<br>
+<font size="8">
+<center><script language="Javascript" align="right">
+
+day = new Date()
+hr = day.getHours()
+hr1 = hr - 12
+
+if (hr < "6") {
+document.write("Go back to bed!! "+hr+" AM is too early!")
+}
+
+else if (hr < "12") {
+document.write("Good morning.  Look at your watch isn't it "+hr+" AM ? Then hurry up for the registration.")
+}
+
+else if (hr < "13") {
+document.write("Lunch time!  Look at your watch it's "+hr+" M")
+}
+
+else if (hr < "17") {
+document.write("Good Afternoon.  Look at your watch isn't it "+hr1+" PM ? Then hurry up for the registration.")
+}
+
+else if (hr < "22") {
+document.write("Good Evening.  Look at your watch isn't it "+hr1+" PM ? Then hurry up for the registration.")
+}
+
+else if (hr > "21") {
+document.write("Good night.  Look at your watch isn't it "+hr1+" PM ?, Go to sleep.")
+}
+
+</script></center></font>
+
+<center><h1><a href="home.html"><font size="8">-: Click here to enter :-</font></a></h1></center>
+
+</body>
+</html>

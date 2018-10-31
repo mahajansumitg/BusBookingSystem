@@ -1,0 +1,1 @@
+For mongo server :- mongod --dbpath F:\mydb
